@@ -8,7 +8,7 @@ export default class Crearcoche extends Component {
   cajaMarca = React.createRef();
   cajaModelo = React.createRef();
   cajaConductor = React.createRef();
-  archivoImagen = React.createRef();
+  cajaImagen = React.createRef();
 
   state = {
     status: false
@@ -22,12 +22,14 @@ export default class Crearcoche extends Component {
     let marca = this.cajaMarca.current.value;
     let modelo = this.cajaModelo.current.value;
     let conductor = this.cajaConductor.current.value;
-
+    let imagen = this.cajaImagen.current.value;
+    
     let coche = {
       idCoche: id,
       marca: marca,
       modelo: modelo,
       conductor: conductor,
+      imagen: imagen
     }
 
     let request = "api/Coches/InsertCoche";
@@ -56,8 +58,8 @@ export default class Crearcoche extends Component {
           <input ref={this.cajaModelo} className='form-control' type='text' /><br/>
           <label>Introduce conductor:</label>
           <input ref={this.cajaConductor} className='form-control' type='text' /><br/>
-          <label>Introduce imagen: (no usar)</label>
-          <input ref={this.archivoImagen} className='form-control' type='file' /><br/>
+          <label>Introduce el url de tu imagen:</label>
+          <input ref={this.cajaImagen} className='form-control' type='text' /><br/>
           <hr/>
           <button onClick={this.crearCoche} className='btn btn-primary'>Crear</button>
         </form>
