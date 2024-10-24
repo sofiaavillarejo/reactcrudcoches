@@ -39,6 +39,7 @@ export default class HomeCoches extends Component {
       })
     })
   }
+
   //todo: metodo si el eliminar le hago aqui mismo
   // deleteCoche = (idcoche) =>{
   //   let request = "api/Coches/DeleteCoche" + idcoche;
@@ -77,7 +78,7 @@ export default class HomeCoches extends Component {
                     <td>{coche.idCoche} 
                       ➡️ <NavLink to={"/cochedetalle/" + coche.idCoche} >Detalles</NavLink> 
                       ➡️ <NavLink to={"/cocheupdate/" + coche.idCoche + "/" + coche.marca + "/" + coche.modelo + "/" + coche.conductor}>Modificar</NavLink>
-                      ➡️ <NavLink to={"/cochedelete/" + coche.idCoche}><button>Eliminar</button></NavLink> </td>
+                      ➡️ <NavLink to={"/cochedelete/" + coche.idCoche}><button className='btn btn-danger'>Eliminar</button></NavLink> </td>
                     <td>{coche.marca}</td>
                     <td>{coche.modelo}</td>
                     <td>{coche.conductor}</td>

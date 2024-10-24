@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Global from './Global';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 export default class CocheDetalle extends Component {
   state = {
@@ -25,6 +26,7 @@ export default class CocheDetalle extends Component {
     return (
       <div>
         <h1>Detalle del coche: {this.props.id}</h1>
+        <NavLink to="/">⬅️ Volver atrás</NavLink>
         <table className='table table-active'>
           <thead>
             <tr className='table-primary'>

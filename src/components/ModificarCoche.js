@@ -11,7 +11,8 @@ class ModificarCoche extends Component {
     cajaImagen = React.createRef();
 
     state = {
-        status: false
+        status: false,
+        //coche: null // --> si uso esto tendría que volver a hacer axios
     }
     
     modificarCoche = (e) => {
